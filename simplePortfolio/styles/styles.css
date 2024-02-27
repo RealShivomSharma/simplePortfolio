@@ -69,6 +69,19 @@ nav ul li {
 	cursor: pointer;
 	display: none;
 }
+.hero {
+	display:flex;
+	align-items: center;
+	justify-content: center;
+	gap: 2.5rem;
+	max-width: 68.75rem;
+	margin: auto;
+}
+.hero img {
+	height: 30rem;
+	width: 30rem;
+	clip-path: inset(100px 0 0 0 round 100px)
+}
 html {
   scroll-behavior: smooth;
 }
@@ -96,5 +109,6 @@ a:hover {
 body {
   font-size: 36px;
   font-family: var(--font-family);
+  color: var(--primary-color);
   background-color: var(--background);
 }
