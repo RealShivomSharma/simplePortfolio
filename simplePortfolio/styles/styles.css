@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Inter&display=swap');
 :root {
-  --font-family: "Inter", sans-serif;
+  --font-family-header: 'Open Sans', sans-serif;
+  --font-family-body: 'Inter', sans-serif;
   --normal-font: 400;
   --bold-font: 700;
   --bolder-font: 900;
-  --background: #272C33;
+  --background: #121212; 
   --primary-color: #ffffff;
   --secondary-color: #ff7235;
   --primary-shadow: #8b8eaf;
@@ -24,7 +27,6 @@ nav {
 	justify-content: space-between;
 	padding: 1.5rem 1.5rem;
 	background-color: var(--background);
-	box-shadow: 0 3px 5px rgba(0,0,0,0.1);
 	color: var(--primary-color);
 	
 }
@@ -38,6 +40,7 @@ nav {
 	}
 }
 nav h1 {
+	font-weight: var(--bolder-font);
 	filter: blur(0.25px);
 	color: var(--primary-color);
 	animation: fadeInAnimation ease 2s;
@@ -76,8 +79,11 @@ nav ul li {
 	flex-direction:column;
 	align-items: flex-start;
 	padding: 20px;
-	width: 50vw;
-	border: 2px solid #fff;
+	border: 2px linear-gradient(to right, #07345e, #201ac7, #0f1d47);
+	border-radius: 25px;
+	width: 300px;
+	height: 250px;
+	margin-left: 20px;
 }
 .hero img {
 	height: 150px;
@@ -85,25 +91,33 @@ nav ul li {
 	object-fit: cover;
 	margin-right: 20px;
 	border: 2px solid #fff;
+	margin-bottom: var(--bottom-margin);
 }
 .hero .bio {
+	font-family: var(--font-family-body);
 	position: relative;
-	top: 0;
-	left: 0;
 	z-index: -1;
-	padding: 15px;
-	border: 2px solid var(--secondary-color);
-	border-radius: 5px;
+	border-radius: 20px;
+
 
 }
 .hero .bio-title {
-	color: #fff;
+	letter-spacing: -0.3rem;
+	width: 100%;
+	line-height: 1;
+	font-weight: --var(--bolder-font);
+	background: linear-gradient(to right, #07345e, #201ac7, #0f1d47);
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
 	margin-bottom: var(--bottom-margin);
-	
 }
-.hero .bio-text {
-	color: var(--primary-color);
 
+.hero .bio-text {
+	box-sizing: border-box;
+	border: 2px solid linear-gradient(to right, #07345e, #201ac7, #0f1d47);
+	font-size: 16px;
+	font-weight: var(--bold-font);
+	color: var(--primary-color);
 }
 html {
   scroll-behavior: smooth;
@@ -131,14 +145,9 @@ a:hover {
 
 body {
   font-size: 36px;
-  font-family: var(--font-family);
+  font-family: var(--font-family-body);
   color: var(--primary-color);
-  animation: fadeInAnimation ease 3s;
-  animation-delay: 3;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
   color: rgba(255,255,255,0.5);
-  transition: var(--transition);
   background-color: var(--background);
  
 
